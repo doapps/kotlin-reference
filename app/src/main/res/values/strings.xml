@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">kotlin-reference</string>
+
+    <!--Activity Splash-->
+    <string name="title_text">Proyecto Demo En Kotlin\n Doapps</string>
+
 </resources>
