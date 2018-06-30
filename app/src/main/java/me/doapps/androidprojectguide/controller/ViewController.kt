@@ -12,4 +12,8 @@ interface ViewController {
         fun wrongUser(message: String)
         fun emptyUserFields(message: String)
     }
+
+    interface ViewHome {
+        fun listCategory(listString: MutableList<String>)
+    }
 }

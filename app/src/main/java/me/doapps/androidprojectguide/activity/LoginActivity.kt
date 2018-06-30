@@ -1,5 +1,6 @@
 package me.doapps.androidprojectguide.activity
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -55,7 +56,8 @@ class LoginActivity : AppCompatActivity(), ViewController.ViewLogin {
     }
 
     override fun correctUser() {
-        Log.e("ENTRO", "SI")
+        startActivity(Intent(this, HomeActivity::class.java))
+        finish()
     }
 
     override fun wrongUser(message: String) {

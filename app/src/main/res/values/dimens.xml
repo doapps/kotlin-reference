@@ -9,5 +9,7 @@
 
     <!--Spacing-->
     <dimen name="spacing20">20dp</dimen>
+    <dimen name="spacing180">180dp</dimen>
+    <dimen name="spacing200">200dp</dimen>
 
 </resources>

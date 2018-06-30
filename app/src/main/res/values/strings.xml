@@ -8,6 +8,13 @@
     <string name="title_login_text">Demo Kotlin\n Doapps</string>
     <string name="user_login_hide">Usuario</string>
     <string name="password_login_hide">Contraseña</string>
-    <string name="enter_login_hide">Ingresar</string>
+    <string name="enter_login_button">Ingresar</string>
+
+    <!--Activity Home-->
+    <string name="select_category_text">Seleccione una categoría</string>
+    <string name="register_user_button">Registrar Usuario</string>
+    <string name="list_user_button">Lista de Usuarios</string>
+    <string name="verify_list_button">Verificar Lista por internet</string>
+    <string name="download_list_button">Descargar Lista</string>
 
 </resources>

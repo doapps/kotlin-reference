@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import me.doapps.androidprojectguide.activity.HomeActivity
 import me.doapps.androidprojectguide.activity.LoginActivity
 import me.doapps.androidprojectguide.controller.ViewController
 import me.doapps.androidprojectguide.presenter.SplashPresenter
@@ -15,7 +16,7 @@ class SplashActivity : AppCompatActivity(), ViewController.ViewSplash {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.splash_main)
+        setContentView(R.layout.activity_splash)
 
         splashPresenter = SplashPresenter(this, applicationContext)
 
@@ -32,6 +33,7 @@ class SplashActivity : AppCompatActivity(), ViewController.ViewSplash {
     }
 
     override fun home() {
-
+        startActivity(Intent(this, HomeActivity::class.java))
+        finish()
     }
 }

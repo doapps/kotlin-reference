@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing20"
-            android:text="@string/enter_login_hide" />
+            android:text="@string/enter_login_button" />
 
     </LinearLayout>
 
