@@ -17,4 +17,9 @@
     <string name="verify_list_button">Verificar Lista por internet</string>
     <string name="download_list_button">Descargar Lista</string>
 
+    <!--Activity ListConnection-->
+    <string name="user_id_list_connection_text">User Id :</string>
+    <string name="id_list_connection_text">Id :</string>
+    <string name="title_item_list_connection_text">Titulo :</string>
+
 </resources>

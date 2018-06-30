@@ -1,5 +1,7 @@
 package me.doapps.androidprojectguide.controller
 
+import me.doapps.androidprojectguide.model.Album
+
 interface ViewController {
 
     interface ViewSplash {
@@ -15,5 +17,9 @@ interface ViewController {
 
     interface ViewHome {
         fun listCategory(listString: MutableList<String>)
+    }
+
+    interface ViewListConnection {
+        fun listAlbum(albums: MutableList<Album>)
     }
 }
