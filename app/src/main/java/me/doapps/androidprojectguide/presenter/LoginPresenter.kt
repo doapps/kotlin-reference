@@ -7,7 +7,7 @@ import me.doapps.androidprojectguide.session.Preference
 
 class LoginPresenter constructor(private val viewLogin: ViewController.ViewLogin, context: Context) {
 
-    private var preference: Preference = Preference.instance(context)
+    private val preference = Preference.instance(context)
 
     fun verifyUser(user: String, password: String) {
         if (user.isEmpty() || password.isEmpty()) {
