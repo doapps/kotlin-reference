@@ -2,6 +2,12 @@
     <string name="app_name">kotlin-reference</string>
 
     <!--Activity Splash-->
-    <string name="title_text">Proyecto Demo En Kotlin\n Doapps</string>
+    <string name="title_splash_text">Proyecto Demo En Kotlin\n Doapps</string>
+
+    <!--Activity Login-->
+    <string name="title_login_text">Demo Kotlin\n Doapps</string>
+    <string name="user_login_hide">Usuario</string>
+    <string name="password_login_hide">Contraseña</string>
+    <string name="enter_login_hide">Ingresar</string>
 
 </resources>
