@@ -36,7 +36,7 @@ class LoginActivity : AppCompatActivity(), ViewController.ViewLogin {
     private fun view() {
         ButterKnife.bind(this)
 
-        loginPresenter = LoginPresenter(this)
+        loginPresenter = LoginPresenter(this, applicationContext)
     }
 
     private fun convertData() {
