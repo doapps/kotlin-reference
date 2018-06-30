@@ -16,7 +16,7 @@ class ListConnectionPresenter constructor(private val viewListConnection: ViewCo
     fun listAlbum() {
         api.listAlbums().enqueue(object : Callback<JsonArray> {
             override fun onFailure(call: Call<JsonArray>?, t: Throwable?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                viewListConnection.messageError("Problemas de coneccion")
             }
 
             override fun onResponse(call: Call<JsonArray>?, response: Response<JsonArray>?) {

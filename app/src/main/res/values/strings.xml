@@ -22,4 +22,7 @@
     <string name="id_list_connection_text">Id :</string>
     <string name="title_item_list_connection_text">Titulo :</string>
 
+    <!--Message Alerts-->
+    <string name="accept_text">Aceptar</string>
+
 </resources>

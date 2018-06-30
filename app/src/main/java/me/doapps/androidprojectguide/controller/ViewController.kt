@@ -21,5 +21,6 @@ interface ViewController {
 
     interface ViewListConnection {
         fun listAlbum(albums: MutableList<Album>)
+        fun messageError(message: String)
     }
 }
