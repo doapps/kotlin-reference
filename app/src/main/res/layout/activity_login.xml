@@ -28,7 +28,7 @@
             android:textSize="@dimen/text30" />
 
         <EditText
-            android:id="@+id/user_edit"
+            android:id="@+id/userEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing20"
@@ -37,7 +37,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/password_edit"
+            android:id="@+id/passwordEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing20"
@@ -46,7 +46,7 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/enter_button"
+            android:id="@+id/enterButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing20"

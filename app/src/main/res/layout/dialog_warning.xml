@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/message_text"
+            android:id="@+id/messageText"
             android:layout_width="match_parent"
             android:layout_height="@dimen/spacing70"
             android:gravity="center"
@@ -28,7 +28,7 @@
             android:textSize="@dimen/text16" />
 
         <Button
-            android:id="@+id/message_button"
+            android:id="@+id/messageButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing10"

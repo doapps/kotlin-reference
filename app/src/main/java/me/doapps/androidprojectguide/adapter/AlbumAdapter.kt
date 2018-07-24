@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import kotlinx.android.synthetic.main.item_album.view.*
 import me.doapps.androidprojectguide.R
 import me.doapps.androidprojectguide.model.Album
 
@@ -21,14 +21,10 @@ class AlbumAdapter constructor(private val activity: Activity, private val listA
     }
 
     override fun onBindViewHolder(holder: AlbumHolder, position: Int) {
-        holder.userIdText.text = listAlbum[position].userId.toString()
-        holder.idText.text = listAlbum[position].id.toString()
-        holder.titleText.text = listAlbum[position].title
+        holder.itemView.userIdText.text = listAlbum[position].userId.toString()
+        holder.itemView.idText.text = listAlbum[position].id.toString()
+        holder.itemView.titleText.text = listAlbum[position].title
     }
 
-    class AlbumHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val userIdText: TextView = view.findViewById(R.id.user_id_text)
-        val idText: TextView = view.findViewById(R.id.id_text)
-        val titleText: TextView = view.findViewById(R.id.title_text)
-    }
+    class AlbumHolder(view: View) : RecyclerView.ViewHolder(view)
 }

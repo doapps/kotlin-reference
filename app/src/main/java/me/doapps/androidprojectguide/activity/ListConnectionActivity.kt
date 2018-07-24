@@ -3,9 +3,7 @@ package me.doapps.androidprojectguide.activity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import butterknife.BindView
-import butterknife.ButterKnife
+import kotlinx.android.synthetic.main.activity_list_connection.*
 import me.doapps.androidprojectguide.R
 import me.doapps.androidprojectguide.adapter.AlbumAdapter
 import me.doapps.androidprojectguide.controller.ViewController
@@ -14,9 +12,6 @@ import me.doapps.androidprojectguide.model.Album
 import me.doapps.androidprojectguide.presenter.ListConnectionPresenter
 
 class ListConnectionActivity : AppCompatActivity(), ViewController.ViewListConnection {
-
-    @BindView(R.id.album_recycler)
-    lateinit var albumRecycler: RecyclerView
 
     private lateinit var listConnectionPresenter: ListConnectionPresenter
     private lateinit var albumAdapter: AlbumAdapter
@@ -31,7 +26,6 @@ class ListConnectionActivity : AppCompatActivity(), ViewController.ViewListConne
     }
 
     private fun view() {
-        ButterKnife.bind(this)
 
         listConnectionPresenter = ListConnectionPresenter(this)
 

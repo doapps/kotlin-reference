@@ -7,7 +7,7 @@
     tools:context=".activity.ListConnectionActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/album_recycler"
+        android:id="@+id/albumRecycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"

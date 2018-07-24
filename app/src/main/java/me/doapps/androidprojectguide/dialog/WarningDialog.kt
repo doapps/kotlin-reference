@@ -2,9 +2,9 @@ package me.doapps.androidprojectguide.dialog
 
 import android.app.Activity
 import android.app.AlertDialog
-import android.widget.Button
-import android.widget.TextView
 import me.doapps.androidprojectguide.R
+import kotlinx.android.synthetic.main.dialog_warning.view.*
+
 
 class WarningDialog constructor(private val activity: Activity, private val message: String) {
 
@@ -19,11 +19,9 @@ class WarningDialog constructor(private val activity: Activity, private val mess
         val view = inflater.inflate(R.layout.dialog_warning, null)
         builder.setView(view)
 
-        val messageText = view.findViewById<TextView>(R.id.message_text)
-        messageText.text = message
+        view.messageText.text = message
 
-        val messageButton = view.findViewById<Button>(R.id.message_button)
-        messageButton.setOnClickListener({
+        view.messageButton.setOnClickListener({
             accept.acceptOption()
         })
 
