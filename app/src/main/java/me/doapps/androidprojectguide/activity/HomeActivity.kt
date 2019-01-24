@@ -1,9 +1,9 @@
 package me.doapps.androidprojectguide.activity
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_home.*
 import me.doapps.androidprojectguide.R
 import me.doapps.androidprojectguide.adapter.CategoryAdapter
