@@ -6,13 +6,14 @@ import me.doapps.androidprojectguide.R
 import kotlinx.android.synthetic.main.dialog_warning.view.*
 
 
-class WarningDialog constructor(private val activity: Activity, private val message: String) {
+class WarningDialog constructor(private val activity: Activity ) {
 
     private lateinit var builder: AlertDialog.Builder
     private lateinit var alertDialog: AlertDialog
     private var inflater = activity.layoutInflater
 
     private lateinit var accept: Accept
+    lateinit var message: String
 
     fun show() {
         builder = AlertDialog.Builder(activity)
@@ -21,9 +22,9 @@ class WarningDialog constructor(private val activity: Activity, private val mess
 
         view.messageText.text = message
 
-        view.messageButton.setOnClickListener({
+        view.messageButton.setOnClickListener {
             accept.acceptOption()
-        })
+        }
 
         alertDialog = builder.create()
         alertDialog.show()

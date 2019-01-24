@@ -1,11 +1,12 @@
 package me.doapps.androidprojectguide.presenter
 
 import android.content.Context
+import me.doapps.androidprojectguide.controller.LoginController
 import me.doapps.androidprojectguide.controller.ViewController
 import me.doapps.androidprojectguide.extensions.compare
 import me.doapps.androidprojectguide.session.Preference
 
-class LoginPresenter constructor(private val viewLogin: ViewController.ViewLogin, context: Context) {
+class LoginPresenter constructor(private val viewLogin: LoginController, context: Context) {
 
     private val preference = Preference.instance(context)
 

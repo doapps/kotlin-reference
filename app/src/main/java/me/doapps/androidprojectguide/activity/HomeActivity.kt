@@ -3,18 +3,19 @@ package me.doapps.androidprojectguide.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_home.*
 import me.doapps.androidprojectguide.R
 import me.doapps.androidprojectguide.adapter.CategoryAdapter
-import me.doapps.androidprojectguide.controller.ViewController
+import me.doapps.androidprojectguide.controller.HomeController
 import me.doapps.androidprojectguide.presenter.HomePresenter
+import org.koin.android.ext.android.inject
+import org.koin.core.parameter.parametersOf
 
-class HomeActivity : AppCompatActivity(), ViewController.ViewHome {
+class HomeActivity : AppCompatActivity(), HomeController {
 
-    private lateinit var homePresenter: HomePresenter
-    private lateinit var categoryAdapter: CategoryAdapter
-    private lateinit var linearLayoutManager: LinearLayoutManager
+    private val homePresenter: HomePresenter by inject { parametersOf(this) }
+    private val categoryAdapter: CategoryAdapter by inject()
+    private val gridLayoutManager: GridLayoutManager by inject { parametersOf(2) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,19 +24,13 @@ class HomeActivity : AppCompatActivity(), ViewController.ViewHome {
     }
 
     private fun viewHolder() {
-
-        homePresenter = HomePresenter(this)
-
-        linearLayoutManager = LinearLayoutManager(this)
-        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
-
+        categoryRecycler.layoutManager = gridLayoutManager
+        categoryRecycler.adapter = categoryAdapter
         homePresenter.listCategory(this)
     }
 
     override fun listCategory(listString: MutableList<String>) {
-        categoryAdapter = CategoryAdapter(this, listString)
-
-        categoryRecycler.layoutManager = GridLayoutManager(this, 2)
-        categoryRecycler.adapter = categoryAdapter
+        categoryAdapter.list = listString
+        categoryAdapter.notifyDataSetChanged()
     }
 }

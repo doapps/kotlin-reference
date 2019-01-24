@@ -6,13 +6,15 @@ import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login.*
 import me.doapps.androidprojectguide.R
-import me.doapps.androidprojectguide.controller.ViewController
+import me.doapps.androidprojectguide.controller.LoginController
 import me.doapps.androidprojectguide.extensions.isEmptyString
 import me.doapps.androidprojectguide.presenter.LoginPresenter
+import org.koin.android.ext.android.inject
+import org.koin.core.parameter.parametersOf
 
-class LoginActivity : AppCompatActivity(), ViewController.ViewLogin {
+class LoginActivity : AppCompatActivity(), LoginController {
 
-    private lateinit var loginPresenter: LoginPresenter
+    private val loginPresenter: LoginPresenter by inject { parametersOf(this) }
 
     private var user = ""
     private var password = ""
@@ -25,7 +27,6 @@ class LoginActivity : AppCompatActivity(), ViewController.ViewLogin {
     }
 
     private fun view() {
-        loginPresenter = LoginPresenter(this, applicationContext)
         enterButton.setOnClickListener {
             convertData()
             loginPresenter.verifyUser(user, password)

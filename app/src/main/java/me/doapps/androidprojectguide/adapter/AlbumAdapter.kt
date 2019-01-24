@@ -1,6 +1,5 @@
 package me.doapps.androidprojectguide.adapter
 
-import android.app.Activity
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -9,15 +8,16 @@ import kotlinx.android.synthetic.main.item_album.view.*
 import me.doapps.androidprojectguide.R
 import me.doapps.androidprojectguide.model.Album
 
-class AlbumAdapter constructor(private val activity: Activity, private val listAlbum: MutableList<Album>)
-    : RecyclerView.Adapter<AlbumAdapter.AlbumHolder>() {
+class AlbumAdapter : RecyclerView.Adapter<AlbumAdapter.AlbumHolder>() {
+
+    lateinit var listAlbum: MutableList<Album>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlbumHolder {
-        return AlbumHolder(LayoutInflater.from(activity).inflate(R.layout.item_album, parent, false))
+        return AlbumHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_album, parent, false))
     }
 
     override fun getItemCount(): Int {
-        return listAlbum.size
+        return if (::listAlbum.isInitialized) listAlbum.size else 0
     }
 
     override fun onBindViewHolder(holder: AlbumHolder, position: Int) {

@@ -2,9 +2,10 @@ package me.doapps.androidprojectguide.presenter
 
 import android.app.Activity
 import me.doapps.androidprojectguide.R
+import me.doapps.androidprojectguide.controller.HomeController
 import me.doapps.androidprojectguide.controller.ViewController
 
-class HomePresenter constructor(private val viewHome: ViewController.ViewHome) {
+class HomePresenter constructor(private val viewHome: HomeController) {
 
     fun listCategory(activity: Activity) {
         viewHome.listCategory(listTitleCategory(activity))

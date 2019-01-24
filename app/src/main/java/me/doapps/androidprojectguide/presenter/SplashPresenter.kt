@@ -1,10 +1,10 @@
 package me.doapps.androidprojectguide.presenter
 
 import android.content.Context
-import me.doapps.androidprojectguide.controller.ViewController
+import me.doapps.androidprojectguide.controller.SplashController
 import me.doapps.androidprojectguide.session.Preference
 
-class SplashPresenter constructor(private val viewSplash: ViewController.ViewSplash, context: Context) {
+class SplashPresenter constructor(private val viewSplash: SplashController, context: Context) {
 
     private val preference = Preference.instance(context)
 
